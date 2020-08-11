@@ -139,4 +139,12 @@ class Sudoku:
         :param col: int of the column of the element to be deleted
         """
         self.board[row, col] = 0
-        
+
+    def __str__(self):
+        return str(self.board)
+
+    def __hash__(self):
+        return hash(self.board)
+
+    def __eq__(self, other):
+        return isinstance(other, Sudoku) and other.board == self.board
