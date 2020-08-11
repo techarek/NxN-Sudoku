@@ -138,4 +138,3 @@ class Sudoku:
         :param col: int of the column of the element to be deleted
         """
         self.board[row, col] = 0
-
