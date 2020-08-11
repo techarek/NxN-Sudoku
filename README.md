@@ -41,5 +41,6 @@ which returns the numpy array
 ~~~~
 
 The added numbers can be seen in red:
+
 ![Sample Sudoku Puzzle Solution](https://upload.wikimedia.org/wikipedia/commons/1/12/Sudoku_Puzzle_by_L2G-20050714_solution_standardized_layout.svg)
 
