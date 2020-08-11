@@ -10,7 +10,7 @@ class Sudoku:
         grid where self.board[i, j] is the number written in the ith row and the jth column of the board,
         if self.board[i, j] == 0, then that square in the grid is empty.
     Representation Invariant: All numbers in self.board must be between 0 and self.board_size inclusive,
-        self.board_size is a perfect square
+        self.board_size is a perfect square, self.board is a square array
     """
 
     def __init__(self, board: list):
@@ -31,7 +31,8 @@ class Sudoku:
         """
         assert 0 <= self.board.all() <= self.board_size
         # Checks that the board size is a perfect square
-        assert any([self.board_size == i**2 for i in range(self.block_size)])
+        assert any([self.board_size == i**2 for i in range(self.block_size + 1)])
+        assert self.board.shape[0] == self.board.shape[1]
 
     def get_next_empty_cell(self):
         """
@@ -138,3 +139,4 @@ class Sudoku:
         :param col: int of the column of the element to be deleted
         """
         self.board[row, col] = 0
+        
